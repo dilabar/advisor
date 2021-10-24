@@ -128,7 +128,7 @@ class CreateBookingView (APIView,):
             return Response(errors, status=404)
         adv = Advisor.objects.filter(id=advisor_id).count() 
         if adv <= 0:
-            msg = {"Bad request ": ['user not found', ]}
+            msg = {"Bad request ": ['advisor not found', ]}
             errors = {'errors': msg}
             return Response(errors, status=404)
 
