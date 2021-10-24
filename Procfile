@@ -1,1 +1,1 @@
-web:advisor.wsgi 
+web: gunicorn advisor.wsgi 
